@@ -1,0 +1,40 @@
+{
+  "request": {
+    "description": "US-based B2B software companies that sell scheduling or practice-management tools to dental practices",
+    "count": 2
+  },
+  "requirements": [
+    "US-based headquarters",
+    "B2B software company",
+    "Sells scheduling tools and/or practice-management software",
+    "Target customers are dental practices"
+  ],
+  "companies": [
+    {
+      "name": "NexHealth",
+      "website": "https://www.nexhealth.com",
+      "summary": "A San Francisco-based patient experience platform offering EHR-integrated scheduling and practice workflow tools built specifically for dental and medical practices.",
+      "checks": [
+        { "requirement": "US-based headquarters", "status": "met", "evidence": "NexHealth was founded in 2017 and is based in San Francisco, California.", "source": "https://mppg.net/partners/operations/nexhealth/" },
+        { "requirement": "B2B software company", "status": "met", "evidence": "NexHealth sells its platform to dental practice owners, office managers, and clinicians as a business software product.", "source": "https://www.capterra.com/p/182271/NexHealth/" },
+        { "requirement": "Sells scheduling tools and/or practice-management software", "status": "met", "evidence": "NexHealth offers EHR-integrated real-time scheduling, patient communication, and digital paperwork management.", "source": "https://www.nexhealth.com/resources/hipaa-compliant-scheduling-software" },
+        { "requirement": "Target customers are dental practices", "status": "met", "evidence": "NexHealth is most used by dental practice owners, office managers, front-desk staff, and clinicians.", "source": "https://www.capterra.com/p/182271/NexHealth/" }
+      ],
+      "confidence": "high"
+    },
+    {
+      "name": "Curve Dental",
+      "website": "https://www.curvedental.com",
+      "summary": "An Alpharetta, Georgia-based company providing an all-in-one cloud-based practice management platform—including scheduling, billing, and charting—built exclusively for dental offices.",
+      "checks": [
+        { "requirement": "US-based headquarters", "status": "met", "evidence": "Curve Dental's headquarters is located in Alpharetta, Georgia, United States, at 10745 Westside Way.", "source": "https://www.curvedental.com/" },
+        { "requirement": "B2B software company", "status": "met", "evidence": "Curve Dental is a privately held provider of SaaS-based dental practice management software sold to dental offices and DSOs.", "source": "https://getlatka.com/companies/curve-dental" },
+        { "requirement": "Sells scheduling tools and/or practice-management software", "status": "met", "evidence": "Curve Dental is the AI-powered, cloud-based dental practice management platform that connects clinical care, scheduling, insurance, billing, payments, and patient engagement.", "source": "https://www.curvedental.com/" },
+        { "requirement": "Target customers are dental practices", "status": "met", "evidence": "Curve Dental provides the leading all-in-one cloud-based practice management software for dental professionals and practices across the United States and Canada.", "source": "https://www.prnewswire.com/news-releases/curve-dental-announces-strategic-integration-partnership-with-dentalhq-setting-new-standard-for-connected-practice-management-302604329.html" }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "notes": "Both companies are privately held; no revenue threshold was specified in the buyer's requirements so none was evaluated. Curve Dental also serves Canadian practices in addition to the US, but its headquarters is confirmed in Alpharetta, GA.",
+  "disclaimer": "Company-level research from public web sources. Figures such as revenue are estimates; verify before relying on them."
+}

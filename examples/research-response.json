@@ -1,0 +1,36 @@
+{
+  "question": "What is the x402 payment protocol and who created it?",
+  "answer": "x402 is an open, internet-native payment protocol that embeds stablecoin payments into HTTP using the HTTP 402 status code. It enables machine-to-machine commerce and allows applications, APIs, and AI agents to send and receive instant, autonomous stablecoin payments such as USDC and USDT directly over HTTP without requiring accounts, credit cards, or manual intervention. The protocol was created by Coinbase, with the x402 Foundation established by Coinbase and Cloudflare in September 2025. The x402 Foundation is now backed by major companies including Google, Visa, AWS, Circle, Anthropic, and Vercel. As of March 2026, x402 has processed over 119 million transactions on Base and 35 million on Solana.",
+  "key_points": [
+    {
+      "point": "x402 is an open payment protocol that embeds stablecoin payments into HTTP using the HTTP 402 status code",
+      "source": "https://www.fireblocks.com/blog/how-x402-and-dynamic-enable-internet-native-payments-for-ai-and-apis"
+    },
+    {
+      "point": "The protocol was created by Coinbase, with the x402 Foundation established by Coinbase and Cloudflare in September 2025",
+      "source": "https://www.dwf-labs.com/research/inside-x402-how-a-forgotten-http-code-becomes-the-future-of-autonomous-payments"
+    },
+    {
+      "point": "x402 enables machine-to-machine commerce and AI agent payments without requiring accounts, credit cards, or manual intervention",
+      "source": "https://sherlock.xyz/post/x402-explained-the-http-402-payment-protocol"
+    },
+    {
+      "point": "The x402 Foundation is now backed by major companies including Google, Visa, AWS, Circle, Anthropic, and Vercel",
+      "source": "https://eco.com/support/en/articles/12328618-x402-protocol-explained-how-ai-agents-pay-onchain"
+    },
+    {
+      "point": "As of March 2026, x402 has processed over 119 million transactions on Base and 35 million on Solana",
+      "source": "https://sherlock.xyz/post/x402-explained-the-http-402-payment-protocol"
+    }
+  ],
+  "sources": [
+    { "title": "What is x402?", "url": "https://solana.com/x402/what-is-x402" },
+    { "title": "x402: An AI-Native Payment Protocol for the Web", "url": "https://medium.com/@gwrx2005/x402-an-ai-native-payment-protocol-for-the-web-419358450936" },
+    { "title": "How x402 and Dynamic Enable Internet-Native Payments for AI and APIs", "url": "https://www.fireblocks.com/blog/how-x402-and-dynamic-enable-internet-native-payments-for-ai-and-apis" },
+    { "title": "Inside x402: Is It the Future of Online Payments?", "url": "https://www.dwf-labs.com/research/inside-x402-how-a-forgotten-http-code-becomes-the-future-of-autonomous-payments" },
+    { "title": "x402 Protocol Explained: How AI Agents Pay Onchain", "url": "https://eco.com/support/en/articles/12328618-x402-protocol-explained-how-ai-agents-pay-onchain" }
+  ],
+  "confidence": "high",
+  "unverified": [],
+  "disclaimer": "Quick research from public web sources. Verify important facts before relying on them."
+}
