@@ -5,6 +5,7 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
+    "fact-check": "node fact-check.mjs",
     "research": "node research.mjs",
     "leads": "node leads.mjs"
   },

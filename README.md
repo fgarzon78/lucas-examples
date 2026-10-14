@@ -6,6 +6,7 @@ Pay per request in USDC on Base. No account and no API key. Every claim comes wi
 
 | Endpoint | Price | What you get |
 |---|---|---|
+| `POST https://api.lucasnode.app/api/x402/fact-check` | $0.05 | A verdict on one claim (true, false, partly true or unverified), with a one-sentence answer and its source |
 | `POST https://api.lucasnode.app/api/x402/research` | $0.25 | A sourced answer to any research question |
 | `POST https://api.lucasnode.app/api/x402/leads` | $1.00 | Up to 3 companies matching your criteria, each requirement checked with evidence and a source |
 
@@ -17,6 +18,9 @@ You need Node.js 18 or newer and a wallet holding a little USDC on Base. You do 
 git clone https://github.com/fgarzon78/lucas-examples.git
 cd lucas-examples
 npm install
+
+# Fact check ($0.05)
+EVM_PRIVATE_KEY=YOUR_WALLET_PRIVATE_KEY node fact-check.mjs "Supabase's Pro plan starts at \$25 per month."
 
 # Quick research ($0.25)
 EVM_PRIVATE_KEY=YOUR_WALLET_PRIVATE_KEY node research.mjs "What is the x402 payment protocol and who created it?"
@@ -31,7 +35,7 @@ Replace `YOUR_WALLET_PRIVATE_KEY` with your own wallet's private key. The paymen
 
 - Never commit a private key or paste it into code. These scripts read it from the `EVM_PRIVATE_KEY` environment variable only.
 - Use a dedicated wallet that holds only what you plan to spend.
-- The official x402 client refuses payments above $1 per request by default. Both Lucas endpoints are at or under $1, so they work with the default.
+- The official x402 client refuses payments above $1 per request by default. All Lucas endpoints are at or under $1, so they work with the default.
 
 ## How payment works
 
@@ -39,19 +43,21 @@ Replace `YOUR_WALLET_PRIVATE_KEY` with your own wallet's private key. The paymen
 2. The x402 client signs a USDC payment on Base and retries the request.
 3. Lucas runs the research and returns JSON. Payment settles only after a successful response.
 
-Invalid requests (HTTP 400) and failed research (HTTP 502) are never charged.
+Invalid requests (HTTP 400) and failed research or fact checks (HTTP 502) are never charged.
 
 ## Example responses
 
 Real responses from paid requests:
 
+- [`examples/fact-check-response.json`](examples/fact-check-response.json): a fact check on Supabase's pricing, confirmed on supabase.com
 - [`examples/research-response.json`](examples/research-response.json): quick research on the x402 protocol
 - [`examples/leads-response.json`](examples/leads-response.json): lead research on dental practice software
 
 ## Limits
 
 - Public web sources only.
-- Company-level information only: no personal contact details or private information about individuals.
+- Company-level information only: no individual people, personal contact details or private information about individuals.
+- A fact check uses one web search, so it suits simple, checkable facts. Use quick research for anything broader.
 - Figures such as private company revenue are third-party estimates.
 - Live signals such as current ad activity are marked unverified unless recent, dated evidence exists.
 - Results are produced by an AI researcher. Verify important facts before relying on them.
@@ -60,7 +66,11 @@ Real responses from paid requests:
 
 - Website: https://lucasnode.app
 - Docs: https://lucasnode.app/docs
+- Pricing: https://lucasnode.app/pricing
+- OpenAPI: https://lucasnode.app/openapi.json
 - For AI agents: https://lucasnode.app/llms.txt
+- Listed on [x402scan](https://www.x402scan.com/server/5d8b3d72-b5cd-4015-bb6a-31f3aa1fa398) and [x402-list](https://x402-list.com/services/lucas)
+- Contact: hello@lucasnode.app
 
 ## License
 

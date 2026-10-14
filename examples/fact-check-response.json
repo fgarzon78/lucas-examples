@@ -1,0 +1,13 @@
+{
+  "claim": "Supabase's Pro plan starts at $25 per month.",
+  "verdict": "true",
+  "answer": "Supabase's Pro plan starts at $25 per month for the first project included.",
+  "source": {
+    "title": "Pricing & Fees",
+    "url": "https://supabase.com/pricing",
+    "source_type": "official"
+  },
+  "confidence": "high",
+  "checked_at": "2026-10-14T19:30:44.155Z",
+  "disclaimer": "Fact check from one web search. For anything important or complex, use /api/x402/research."
+}
